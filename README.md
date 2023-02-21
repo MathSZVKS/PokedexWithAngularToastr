@@ -1,3 +1,5 @@
+<img align="center" src="https://media.discordapp.net/attachments/431444594241306627/1077460625749459054/image.png?width=1238&height=625">
+
 # AngularPokedex
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
