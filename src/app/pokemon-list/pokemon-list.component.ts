@@ -31,4 +31,8 @@ export class PokemonListComponent {
       }
     )
   }
+
+  reloadPokemons(){
+    this.simpleSearch = true;
+  }
 }

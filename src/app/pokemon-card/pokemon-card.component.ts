@@ -8,17 +8,12 @@ import { Component, Input } from '@angular/core';
 export class PokemonCardComponent {
   @Input() pokemon = '';
   @Input() numberOfDex = 0;
+  @Input() simpleSearch: any;
+  @Input() abilities: any;
 
   getImagePokemon(){
     const formated = this.leadingZero(this.numberOfDex);
-
     return 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/' + formated +'.png';
-  }
-
-  getPokemonData(){
-    const numberFormat = '001';
-
-    return 'https://assets'
   }
 
   leadingZero(str: string | number, size = 3): string{

@@ -1,5 +1,29 @@
-<div class="PokemonCard">
+<div 
+    *ngIf="simpleSearch" 
+    class="PokemonCard"
+>
     <img [src]="getImagePokemon()">
     <br> {{pokemon}}
 </div>
+
+<div 
+    *ngIf="!simpleSearch" 
+    class="PokemonCardImage"
+>
+    <div class="PokemonImage">
+        <img [src]="getImagePokemon()">
+        <br> {{pokemon}}
+    </div>
+</div>
+
+
+<div *ngIf="!simpleSearch" class="PokemonCardDetails" >
+    <h2>Habilidades</h2>
+    <div *ngFor="let abilitie of abilities">
+         * {{abilitie.ability.name}}
+    </div>
+</div>
+
+
+
 
