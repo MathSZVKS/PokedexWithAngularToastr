@@ -1,0 +1,21 @@
+<input #mySearch 
+    (change)="searching(mySearch.value)" 
+    name ="pesquisarPokemon" 
+    class= "rounded mb-3 pokemon-search" 
+    type="search" 
+    placeholder="Pesquisar Pokemon" 
+    autofocus
+    >
+
+<div *ngIf="simpleSearch" class="pokemon-list">
+    <app-pokemon-card *ngFor="let pokemon of pokemonService.pokemons, index as i"
+        [pokemon]="pokemon['name']"
+        [numberOfDex]="i + 1"
+    ></app-pokemon-card>
+</div>
+
+<div *ngIf="!simpleSearch">
+    teste
+</div>
+
+
