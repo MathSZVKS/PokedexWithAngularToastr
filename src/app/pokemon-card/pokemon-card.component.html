@@ -4,6 +4,7 @@
 >
     <img [src]="getImagePokemon()">
     <br> {{pokemon}}
+    <br> DexID: {{numberOfDex}}
 </div>
 
 <div 
@@ -13,9 +14,9 @@
     <div class="PokemonImage">
         <img [src]="getImagePokemon()">
         <br> {{pokemon}}
+        <br> DexID: {{numberOfDex}}
     </div>
 </div>
-
 
 <div *ngIf="!simpleSearch" class="PokemonCardDetails" >
     <h2>Habilidades</h2>

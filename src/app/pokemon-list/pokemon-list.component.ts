@@ -21,15 +21,19 @@ export class PokemonListComponent {
     this.pokemonService.getPokemonByName(search).subscribe(
       (dados) => {
         this.pokemonFinded = dados;
-        this.toastr.success('Pokémon encontrado','sucess');
+        this.toastr.success('Pokémon encontrado','Sucesso', {positionClass: 'toast-bottom-right'});
         this.simpleSearch = false;
         console.log(this.pokemonFinded);
       },
       (error) => {
-        this.toastr.error('Pokémon não encontrado', 'Erro');
+        this.toastr.error('Pokémon não encontrado', 'Erro', {positionClass: 'toast-bottom-right'});
         this.simpleSearch = true;
       }
     )
+  }
+
+  alterLimit(qtd: any){
+    this.pokemonService.getPokemonByLimit(qtd);
   }
 
   reloadPokemons(){

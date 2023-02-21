@@ -8,6 +8,15 @@
     autofocus
 >
 
+<input *ngIf="simpleSearch" #qtsPokemons 
+    (change)="alterLimit(qtsPokemons.value)" 
+    name ="quantidadeDePokemons" 
+    class= "pokemon-qtd" 
+    type="Quantidade" 
+    placeholder="Quantidade" 
+    autofocus
+>
+
 <button (click)="reloadPokemons()" *ngIf="!simpleSearch" class="pokemon-button" mat-raised-button color="warn">Voltar</button>
 
 <div *ngIf="simpleSearch" class="pokemon-list">

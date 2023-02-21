@@ -13,7 +13,7 @@ export class PokemonService {
   }
 
   async loadPokemons() {
-    await this.httpClient.get<any>('https://pokeapi.co/api/v2/pokemon?limit=1000').subscribe(
+    await this.httpClient.get<any>('https://pokeapi.co/api/v2/pokemon?limit=400').subscribe(
       (data) => {
         this.pokemons = data.results;
       }
@@ -22,6 +22,14 @@ export class PokemonService {
 
   getPokemonByName(pokemon: string){
     return this.httpClient.get<any>('https://pokeapi.co/api/v2/pokemon/' + pokemon);
+  }
+
+  getPokemonByLimit(limit = 151){
+    this.httpClient.get<any>('https://pokeapi.co/api/v2/pokemon?limit=' + limit).subscribe(
+      (data) => {
+        this.pokemons = data.results;
+      }
+    );
   }
 
 }
