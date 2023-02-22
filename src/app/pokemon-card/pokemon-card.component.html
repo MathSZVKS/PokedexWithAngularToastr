@@ -19,11 +19,45 @@
 </div>
 
 <div *ngIf="!simpleSearch" class="PokemonCardDetails" >
-    <h2>Habilidades</h2>
+    <span class="spanFontSize"> &#11088; Habilidades:</span>
+    <br><br>
+
     <div *ngFor="let abilitie of abilities">
          * {{abilitie.ability.name}}
     </div>
+
+    <div class="spaceDescriptionBT">
+        <span class="spanFontSize"> &#11088; Experiência Base:</span>
+        {{baseExperience}}
+    </div>
+
+    <div >
+        <span class="spanFontSize"> &#11088; Peso:</span>
+        {{height}}Kg
+    </div>
 </div>
+
+<div *ngIf="!simpleSearch" class="statusCards" >
+    <div>
+        <span class="spanStatus">Status</span>
+    </div>
+    <h3 class="statsCards" *ngFor="let stat of stats, index as i">
+        {{stat.stat.name}}
+    </h3>
+</div>
+
+<div *ngIf="!simpleSearch" class="PokemonCardMoves" >
+    <div>
+        <span class="spanMoves">Movimentos</span>
+    </div>
+    <h3 class="moveCards" *ngFor="let move of moves, index as i">
+            {{move.move.name}}
+    </h3>
+</div>
+
+
+
+
 
 
 

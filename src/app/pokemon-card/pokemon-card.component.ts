@@ -10,6 +10,10 @@ export class PokemonCardComponent {
   @Input() numberOfDex = 0;
   @Input() simpleSearch: any;
   @Input() abilities: any;
+  @Input() baseExperience: any;
+  @Input() height: any;
+  @Input() moves: any;
+  @Input() stats: any;
 
   getImagePokemon(){
     const formated = this.leadingZero(this.numberOfDex);
